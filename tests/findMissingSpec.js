@@ -1,3 +1,5 @@
+'use strict';
+
 describe("Find missing number two lists: ", function() {
 
   describe("Case for en empty list", function() {
