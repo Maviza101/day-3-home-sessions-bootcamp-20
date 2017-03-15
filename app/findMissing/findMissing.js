@@ -29,7 +29,12 @@ module.exports.findMissing = function(firstArray, secondArray) {
     shorterArray = firstArray;
   }
   else {
-    return 0;
+    if (firstArray.length == 1 && firstArray[0] != secondArray[0]) {
+      return 'Array arguments have an element each, but these elements have different values';
+    }
+    else {
+      return 0;
+    }
   }
   for (var i = 0; i < longerArray.length; i++) {
     if (i == longerArray.length) {
