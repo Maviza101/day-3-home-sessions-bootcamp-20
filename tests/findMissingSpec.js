@@ -8,9 +8,16 @@ describe("Find missing number two lists: ", function() {
     it("should return 0 for empty list", function() {
       expect(findMissing([], [])).toEqual(0);
     });
+
+    it("should return 9 for a combination of [] and [9]", function() {
+      expect(findMissing([], [9])).toEqual(9);
+    });
+    // And when one is empty, and the other has only ONE element?
+
   });
 
   describe("Case for lists with the same entries", function() {
+    // What about arrays that have the same entries but in different order?
     it("should return 0 for [2], [2]", function() {
       expect(findMissing([2], [2])).toEqual(0);
     });
@@ -21,6 +28,10 @@ describe("Find missing number two lists: ", function() {
 
     it("should return 0 for [7], [7]", function() {
       expect(findMissing([7], [7])).toEqual(0);
+    });
+
+    it("should return 0 for [7, 9, 2, 89], [89, 7, 2, 9]", function() {
+      expect(findMissing([7, 9, 2, 89], [89, 7, 2, 9])).toEqual(0);
     });
   });
 
