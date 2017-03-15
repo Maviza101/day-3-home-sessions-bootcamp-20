@@ -55,9 +55,9 @@ describe("Find the missing number between two lists of numbers: ", function() {
       expect(findMissing([9, 100, 4, 40, 12], [100, 4, 40, 12])).toEqual(9);
     });
 
-    it("should return `Arrays have an element each, which are different from one another` for " + 
+    it("should return `Array arguments have an element each, but these elements have different values` for " + 
         "a combination of [15] and [2]", function() {
-      expect(findMissing([15], [2])).toEqual("Arrays have an element each, which are different from one another");
+      expect(findMissing([15], [2])).toEqual("Array arguments have an element each, but these elements have different values");
     });
   });
 });
