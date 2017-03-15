@@ -4,7 +4,7 @@ describe("Find missing number two lists: ", function() {
   var myFindMissingApp = require("../app/findMissing/findMissing.js");
   var findMissing = myFindMissingApp.findMissing;
 
-  describe("Case for en empty list", function() {
+  describe("Case for an empty list", function() {
     it("should return 0 for empty list", function() {
       expect(findMissing([], [])).toEqual(0);
     });
