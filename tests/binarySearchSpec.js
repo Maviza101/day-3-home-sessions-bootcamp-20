@@ -14,7 +14,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(oneToTwenty[0]).toBe(1);
       expect(oneToTwenty[19]).toBe(20);
       expect(oneToTwenty.length).toBe(20);
-      for(var i = 0; i < oneToTwenty.length - 1;i++) {
+      for(var i = 0; i < oneToTwenty.length - 1; i++) {
         expect(oneToTwenty[i + 1] - oneToTwenty[i]).toBe(1);
       }
     });
@@ -23,7 +23,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(twoToForty[0]).toBe(2);
       expect(twoToForty[19]).toBe(40);
       expect(twoToForty.length).toBe(20);
-      for(var i = 0; i < twoToForty.length - 1;i++) {
+      for(var i = 0; i < twoToForty.length - 1; i++) {
         expect(twoToForty[i + 1] - twoToForty[i]).toBe(2);
       }
     });
@@ -32,7 +32,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(tenToOneThousand[0]).toBe(10);
       expect(tenToOneThousand[99]).toBe(1000);
       expect(tenToOneThousand.length).toBe(100);
-      for(var i = 0; i < tenToOneThousand.length - 1;i++) {
+      for(var i = 0; i < tenToOneThousand.length - 1; i++) {
         expect(tenToOneThousand[i + 1] - tenToOneThousand[i]).toBe(10);
       }
     });
@@ -49,7 +49,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(search.index).toBe(15);
     });
 
-    it('should return {count: < /* array length */, index: -1} for 33 ', function () {
+    it('should return {count: < /* array length */, index: -1} for 33 ', function() {
       var search = oneToTwenty.search(33);
       expect(search.count).toBeLessThan(search.length);
       expect(search.index).toBe(-1);
@@ -75,7 +75,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(search.index).toBe(19);
     });
 
-    it('should return {count: < /* array length */, index: -1} for 33 ', function () {
+    it('should return {count: < /* array length */, index: -1} for 33 ', function() {
       var search = twoToForty.search(33);
       expect(search.count).toBeLessThan(search.length);
       expect(search.index).toBe(-1);
@@ -95,7 +95,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(search.index).toBe(87);
     });
 
-    it('should return {count: < /* array length */, index: -1} for 10000 ', function () {
+    it('should return {count: < /* array length */, index: -1} for 10000 ', function() {
       var search = tenToOneThousand.search(10000);
       expect(search.count).toBeLessThan(search.length);
       expect(search.index).toBe(-1);
