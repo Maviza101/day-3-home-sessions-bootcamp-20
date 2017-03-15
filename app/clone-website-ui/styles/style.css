@@ -1,0 +1,160 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+	font-family: arial, sans-serif;
+  font-size: 1em;
+  color: #666;
+}
+
+/* General styles. */
+a {
+  outline: none;
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover, .hover-underline:hover {
+  text-decoration: underline;
+}
+
+a:active, .click-red-text:active {
+  color: #ee2222;
+  text-decoration: underline;
+}
+
+.blue {
+  color: #3333ff;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+body #wrapper {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wrapper-row {
+  width: 100%;
+}
+
+.row-cells {
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* End of general styles. */
+
+#nav-container {
+  display: block;
+  height: 10%;
+  min-height: 4em;
+  box-sizing: border-box;
+}
+
+#nav-container #account-options {
+  display: block;
+  min-width: 30%;
+  height: 90%;
+  padding: 2%;
+  float: right;
+}
+
+#main-container {
+  padding-top: 10em;
+  height: 80%;
+  box-sizing: border-box;
+}
+
+#main-container #main {
+  display: block;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+#main-container #main .main-row {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#main-container #main #company-logo img {
+  margin: 0 auto;
+}
+
+#main-container #main #search-input {
+  margin-bottom: 2em;
+ margin: 0 auto 2em;
+}
+
+#main-container #main #search-input-container #search-input {
+  border: none;
+  display: block;
+  width: 70%;
+  margin: 0 auto 3em;
+  padding: 1em;
+  line-height: 0;
+  outline: medium none;
+  box-shadow: 2px 2px 2px #ccc, -2px -2px 2px #ddd;
+  transition: box-shadow .5s ease-in-out 0s;
+}
+
+#main-container #main #search-input-container #search-input:hover, 
+#main-container #main #search-input-container #search-input:focus {
+  box-shadow: 3px 5px 5px #ccc, -3px -2px 5px #ddd;
+}
+
+#main-container #main #search-btns-container div {
+  margin: 0 auto;
+}
+
+#main-container #main #search-btns-container div button {
+  border: none;
+  padding: 1em;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  font-size: 13px;
+  font-weight: bold;
+  color: #757575;
+}
+
+#main-container #main #l10n-container #l10n-options-container {
+  margin: 1em auto;
+}
+
+#footer-container {
+  border-top: 1px solid #dddddd;
+  height: 10%;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+#footer-container .footer-column {
+  display: inline-block;
+}
+
+#footer-container .almost-half-width {
+  width: 45%;
+}
+
+.clear-fix {
+  clear: both;
+}
