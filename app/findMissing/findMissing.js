@@ -1,8 +1,9 @@
 'use strict';
 
+// NOTE: findMissing assumes that the array arguments differ by only ONE element.
 module.exports.findMissing = function(firstArray, secondArray) {
-  // Need to specify a comparison function for Array.sort, otherwise 
-  // it will sort according to Unicode values.
+  // Need to specify a comparison function for Array.sort(), otherwise it will 
+  // sort according to Unicode values of the elements' string representations.
 	var sortNumbersAscending = function(num1, num2) {
     if (typeof num1 == 'number' && isNaN(num1)) {
       return 0;
@@ -16,8 +17,7 @@ module.exports.findMissing = function(firstArray, secondArray) {
   secondArray.sort(sortNumbersAscending);
 
   var missingNumber = 0;
-  // Note that the array that has the extra element will be longer while 
-  // the other will be shorter.
+  // The array that has the extra element will be longer and the other, shorter.
   var longerArray = [];
   var shorterArray = [];
   if (firstArray.length > secondArray.length) {
