@@ -26,6 +26,14 @@ function generateArrayOfNumbers(start, end, increment) {
 }
 
 module.exports.search = function(num) {
+  // Handle trivial cases
+  if (this.length == 0) {
+    return {count: 0, index: -1, length: 0};
+  }
+  if (this.length == 1) {
+    return {count: 0, index: 0, length: 1};
+  }
+
   var loopCount = 0;
   // Next two var names inspired by Quicksort.
   var leftMark = 0;
@@ -61,9 +69,19 @@ module.exports.search = function(num) {
         rightMark--;
       }
     }
-    
+
     antiLog *= 2;
     loopCount++;
+  }
+  // This handles cases of arrays that have many instances of the same number e.g [2, 4, 4, 5, 6, 6, 6].
+  // In that case, this function returns the least index.
+  if (this[foundAt] != undefined && this[foundAt - 1] != undefined) {
+    while (this[foundAt] == this[(foundAt - 1)]) {
+      foundAt -= 1;
+      if (this[foundAt - 1] == undefined) {
+        break;
+      }
+    }
   }
   var results = {};
   results.count = loopCount;
