@@ -110,4 +110,40 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(search.index).toBe(-1);
     });
   });
+
+  describe('Test search function with reasonable edge cases', function() {
+    it('should return {count: 0, index: -1} for 35 on an empty array', function() {
+      var search = [].search(40);
+      expect(search.count).toBe(0);
+      expect(search.index).toBe(-1);
+    });
+
+    it('should return {count: 0, index: 0} for 71 in the array [71]', function() {
+      var search = [71].search(71);
+      expect(search.count).toBe(0);
+      expect(search.index).toBe(0);
+    });
+
+    it('should return {count: 0, index: 1} for 32 in the array [4, 32, 32, 89]', function() {
+      var search = [4, 32, 32, 89].search(32);
+      expect(search.count).toBe(0);
+      expect(search.index).toBe(1);
+    });
+
+    /* What about when an element is repeated a few times in a sorted array? We should get 
+    the least index of our desired number. */
+    it('should return {count: 1, index: 4} for 13 in the array [3, 5, 7, 11, 13, 13, 17, 23, ' + 
+        '31, 43, 61, 101, 211, 901]', function() {
+      var search = [3, 5, 7, 11, 13, 13, 17, 23, 31, 43, 61, 101, 211, 901].search(13);
+      expect(search.count).toBe(1);
+      expect(search.index).toBe(4);
+    });
+
+    it('should return {count: 0, index: 4} for 13 in the array [3, 5, 7, 11, 13, 13, 13, 13, 17, ' + 
+        '23, 31, 43, 61, 101, 211, 901]', function() {
+      var search = [3, 5, 7, 11, 13, 13, 13, 13, 17, 23, 31, 43, 61, 101, 211, 901].search(13);
+      expect(search.count).toBe(0);
+      expect(search.index).toBe(4);
+    });
+  });
 });
