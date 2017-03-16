@@ -1,9 +1,18 @@
 'use strict';
 
+var myApp = require("../app/binarySearch/binarySearch.js");
+Array.prototype.toTwenty = myApp.toTwenty;
+Array.prototype.toForty = myApp.toForty;
+Array.prototype.toOneThousand = myApp.toOneThousand;
+Array.prototype.search = myApp.search;
+
 /* Block the indexOf Array function. */
 Array.prototype.indexOf = function () {
   throw new Error('You are not allowed to use the indexOf function');
 };
+
+// A side product of the 3 lines below is we get to see if the custom functions 
+// we assigned above are available to all instances of Array.
 var oneToTwenty = [].toTwenty();
 var twoToForty = [].toForty();
 var tenToOneThousand = [].toOneThousand();
