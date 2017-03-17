@@ -1,7 +1,7 @@
 {
   "name": "day-3-home-sessions-bootcamp-20",
   "version": "1.0.0",
-  "description": "A function that implements the binary search algorithm.",
+  "description": "A project that implements binary search, clones a popular web page and compares two arrays for missing numbers.",
   "directories": {
     "test": "tests"
   },
